@@ -1,6 +1,6 @@
 package app.model;
 
-public class OrderWithDelivery implements IOrder {
+public class OrderWithDelivery extends Order {
     double deliveryPercent = 10;
 
     @Override
