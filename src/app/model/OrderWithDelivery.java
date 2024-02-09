@@ -4,9 +4,9 @@ public class OrderWithDelivery extends Order {
     double deliveryPercent = 10;
 
     @Override
-    public double orderCalculate(int count, double price) {
-        long orderSum = Math.round(count * price * 100);
-        long deliverySum = Math.round(orderSum * 10);
-        return (orderSum + deliverySum) / 100;
+    public double orderCalculate(double price, int count) {
+        long orderSum = Math.round(price * count * 100);
+        long deliverySum = Math.round(orderSum * deliveryPercent);
+        return (orderSum + deliverySum) / 100 / 10;
     }
 }

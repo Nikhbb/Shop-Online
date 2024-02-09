@@ -2,7 +2,7 @@ package app.model;
 
 public class OrderWithoutDelivery extends Order {
     @Override
-    public double orderCalculate(int count, double price) {
-        return Math.round(count * price * 100) / 100;
+    public double orderCalculate(double price, int count) {
+        return Math.round(price * count * 100) / 100;
     }
 }
